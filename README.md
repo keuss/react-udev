@@ -1,6 +1,6 @@
 # react-udev
 
-react-udev
+react-udev with https://facebook.github.io/create-react-app/
 
 In my-app folder :
 

@@ -43,6 +43,13 @@ class Api {
             .then(this.filterSuccess)
     }
 
+    // with payload, must have application/json header value
+    post(path, payload, queryParams) {
+        return fetch(this.encodeUrl(path, queryParams), { method: 'post', credentials: 'same-origin', headers: new Headers({'content-type': 'application/json'}), body: JSON.stringify(payload) })
+            .then(this.filterSuccess)
+            .then(response => response.json())
+    }
+
 }
 
 // Create instance

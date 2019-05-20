@@ -1,27 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import BookList from './BookList';
+import BookForm from './BookForm';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <BookList />
-    </div>
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Books</Link>
+          </li>
+          <li>
+            <Link to="/add">Add Book</Link>
+          </li>
+        </ul>
+        <hr />
+        <Route exact path="/" component={BookList} />
+        <Route path="/add" component={BookForm} />
+      </div>
+    </Router>
   );
 }
 

@@ -6,5 +6,6 @@ In my-app folder :
 
  - npm install
  - npm start (see at http://localhost:3000/)
+ - see Api.js for backend url
  
-Back example here : https://github.com/keuss/spingboot-udev
+Back example here : https://github.com/keuss/springboot-udev
